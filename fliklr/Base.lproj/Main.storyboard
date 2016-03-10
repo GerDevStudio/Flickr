@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,129 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fmD-v6-Jn5">
+                                <rect key="frame" x="26" y="72" width="548" height="522"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="xRV-zy-9bz" detailTextLabel="FXb-35-e2d" style="IBUITableViewCellStyleSubtitle" id="9Q5-Ds-Y3x">
+                                        <rect key="frame" x="0.0" y="28" width="548" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Q5-Ds-Y3x" id="OSx-jz-SAg">
+                                            <rect key="frame" x="0.0" y="0.0" width="548" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xRV-zy-9bz">
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FXb-35-e2d">
+                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-2a-d3d">
+                                <rect key="frame" x="28" y="28" width="544" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hll-hY-2Zx">
+                                <rect key="frame" x="-50" y="229" width="601" height="512"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="T1e-kv-8V4">
+                                    <rect key="frame" x="0.0" y="0.0" width="601" height="512"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XIN-RS-KmY">
+                                            <rect key="frame" x="234" y="103" width="168" height="128"/>
+                                            <gestureRecognizers/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="Iss-gI-0FK"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="XIN-RS-KmY" secondAttribute="height" constant="40" id="V8a-P0-OQh"/>
+                                            </constraints>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="QGF-4N-Rds" appends="YES" id="A73-W7-5c3"/>
+                                                <outletCollection property="gestureRecognizers" destination="qJ8-O4-M5u" appends="YES" id="aWW-8M-jHt"/>
+                                            </connections>
+                                        </imageView>
+                                    </subviews>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="XIN-RS-KmY" firstAttribute="centerX" secondItem="T1e-kv-8V4" secondAttribute="centerX" id="DSF-oW-ZfZ"/>
+                                        <constraint firstItem="XIN-RS-KmY" firstAttribute="centerY" secondItem="T1e-kv-8V4" secondAttribute="centerY" id="jzj-rR-sr3"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="OFh-KL-REe" appends="YES" id="Tfp-5A-3IX"/>
+                                    </connections>
+                                </view>
+                                <blurEffect style="dark"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Zgp-Kn-h1p" appends="YES" id="Ag2-Mm-gdA"/>
+                                </connections>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fmD-v6-Jn5" firstAttribute="top" secondItem="OpH-2a-d3d" secondAttribute="bottom" id="3hU-wb-MDB"/>
+                            <constraint firstAttribute="trailing" secondItem="hll-hY-2Zx" secondAttribute="trailing" id="6KO-qk-AIG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OpH-2a-d3d" secondAttribute="trailing" constant="8" id="Ara-c8-XXv"/>
+                            <constraint firstItem="fmD-v6-Jn5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="G5Z-o2-GNH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fmD-v6-Jn5" secondAttribute="bottom" constant="6" id="Mc6-SZ-53E"/>
+                            <constraint firstItem="OpH-2a-d3d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Mhi-RU-vJp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fmD-v6-Jn5" secondAttribute="trailing" constant="6" id="T3j-4A-FV0"/>
+                            <constraint firstItem="OpH-2a-d3d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="YUZ-63-J8Z"/>
+                            <constraint firstItem="hll-hY-2Zx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dKb-TB-2gI"/>
+                            <constraint firstAttribute="bottom" secondItem="hll-hY-2Zx" secondAttribute="bottom" id="oiT-Tp-WsR"/>
+                            <constraint firstItem="hll-hY-2Zx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pO8-M3-zVH"/>
+                            <constraint firstItem="hll-hY-2Zx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="q3W-QC-jnI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bigView" destination="XIN-RS-KmY" id="qXB-4x-nuC"/>
+                        <outlet property="blurView" destination="hll-hY-2Zx" id="qY7-QP-sSG"/>
+                        <outlet property="pinchGestureRecognizer" destination="QGF-4N-Rds" id="6fc-04-UWW"/>
+                        <outlet property="rotationGestureRecognizer" destination="qJ8-O4-M5u" id="HdL-qf-qsB"/>
+                        <outlet property="searchBar" destination="OpH-2a-d3d" id="3zt-AT-e82"/>
+                        <outlet property="swipeLeftGestureRecognizer" destination="Zgp-Kn-h1p" id="N9P-6i-X8e"/>
+                        <outlet property="swipeRightGestureRecognizer" destination="OFh-KL-REe" id="dNi-sm-Wy5"/>
+                        <outlet property="tableView" destination="fmD-v6-Jn5" id="UDB-66-wIa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="QGF-4N-Rds">
+                    <connections>
+                        <action selector="rotatedOrScaled:" destination="BYZ-38-t0r" id="Tyu-5I-HKL"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="MxV-vy-VbE"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="qJ8-O4-M5u">
+                    <connections>
+                        <action selector="rotatedOrScaled:" destination="BYZ-38-t0r" id="5wq-f2-b6Z"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="uO8-0Z-bDl"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="OFh-KL-REe" userLabel="Swipe Right Gesture Recognizer">
+                    <connections>
+                        <action selector="onSwipe:" destination="BYZ-38-t0r" id="egM-8J-Wcz"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="zIs-mU-Leu"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Zgp-Kn-h1p" userLabel="Swipe Left Gesture Recognizer">
+                    <connections>
+                        <action selector="onSwipe:" destination="BYZ-38-t0r" id="yJq-Hi-fsh"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Y3l-Hp-Aim"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
 </document>

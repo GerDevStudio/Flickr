@@ -14,9 +14,43 @@
 
 @implementation AppDelegate
 
+//handle remote notification registration.
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    
+}
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(nonnull NSData *)deviceToken{
+    const void *devTokenBytes = [deviceToken bytes];
+    
+    NSString *deviceTokenString = [[deviceToken description] stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    
+    deviceToken = [deviceTokenString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    // this allows to get the notifications 
+    // register user notification
+    // iOS >= 8.0
+    if ([UIApplication instanceMethodForSelector:@selector(registerUserNotificationSettings:)]){
+        UIUserNotificationType types = UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeNone|UIUserNotificationTypeSound;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
+        [application registerUserNotificationSettings:settings];
+        [application registerForRemoteNotifications];
+    }
+    else
+    // iOS < 8.0
+    {
+        UIRemoteNotificationType types = UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound;
+        [application registerForRemoteNotificationTypes:types];
+    }
+    //set badge number of application icon to zero.
+    application.applicationIconBadgeNumber = 0;
+    
     return YES;
 }
 

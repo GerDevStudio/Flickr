@@ -498,6 +498,7 @@
 				773EA6311C64DC3D00FB7489 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		773EA6321C64DC3D00FB7489 /* Build configuration list for PBXNativeTarget "fliklrTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +507,7 @@
 				773EA6341C64DC3D00FB7489 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		773EA6351C64DC3D00FB7489 /* Build configuration list for PBXNativeTarget "fliklrUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +516,7 @@
 				773EA6371C64DC3D00FB7489 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
